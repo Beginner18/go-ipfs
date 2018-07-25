@@ -35,6 +35,7 @@ import (
 	pin "github.com/ipfs/go-ipfs/pin"
 	repo "github.com/ipfs/go-ipfs/repo"
 	ft "github.com/ipfs/go-ipfs/unixfs"
+	version "github.com/ipfs/go-ipfs"
 
 	u "gx/ipfs/QmPdKqUcHGFdeSpvjVoaTRPPstGif9GBZb5Q56RVw9o69A/go-ipfs-util"
 	rhelpers "gx/ipfs/QmQpvpeXa8rBfDmt3bdh2ckw2867vsYN1ozf79X7U5rij9/go-libp2p-routing-helpers"
@@ -94,7 +95,7 @@ const (
 )
 
 func init() {
-	identify.ClientVersion = "go-ipfs/" + repo.CurrentVersionNumber + "/" + repo.CurrentCommit
+	identify.ClientVersion = "go-ipfs/" + version.CurrentVersionNumber + "/" + version.CurrentCommit
 }
 
 // IpfsNode is IPFS Core module. It represents an IPFS instance.
